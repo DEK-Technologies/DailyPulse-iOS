@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		497DB6461C062C0800097C2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 497DB6451C062C0800097C2E /* main.m */; };
+		497DB6491C062C0800097C2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 497DB6481C062C0800097C2E /* AppDelegate.m */; };
+		497DB64C1C062C0800097C2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497DB64B1C062C0800097C2E /* ViewController.m */; };
+		497DB64F1C062C0800097C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497DB64D1C062C0800097C2E /* Main.storyboard */; };
+		497DB6511C062C0800097C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497DB6501C062C0800097C2E /* Assets.xcassets */; };
+		497DB6541C062C0800097C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497DB6521C062C0800097C2E /* LaunchScreen.storyboard */; };
+		497DB65F1C062C0800097C2E /* DailyPulseAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497DB65E1C062C0800097C2E /* DailyPulseAppTests.m */; };
+		497DB66A1C062C0800097C2E /* DailyPulseAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 497DB6691C062C0800097C2E /* DailyPulseAppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		497DB65B1C062C0800097C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 497DB6391C062C0800097C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 497DB6401C062C0800097C2E;
+			remoteInfo = DailyPulseApp;
+		};
+		497DB6661C062C0800097C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 497DB6391C062C0800097C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 497DB6401C062C0800097C2E;
+			remoteInfo = DailyPulseApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		497DB6411C062C0800097C2E /* DailyPulseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPulseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		497DB6451C062C0800097C2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		497DB6471C062C0800097C2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		497DB6481C062C0800097C2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		497DB64A1C062C0800097C2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		497DB64B1C062C0800097C2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		497DB64E1C062C0800097C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		497DB6501C062C0800097C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		497DB6531C062C0800097C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		497DB6551C062C0800097C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497DB65A1C062C0800097C2E /* DailyPulseAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyPulseAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		497DB65E1C062C0800097C2E /* DailyPulseAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyPulseAppTests.m; sourceTree = "<group>"; };
+		497DB6601C062C0800097C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497DB6651C062C0800097C2E /* DailyPulseAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyPulseAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		497DB6691C062C0800097C2E /* DailyPulseAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyPulseAppUITests.m; sourceTree = "<group>"; };
+		497DB66B1C062C0800097C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		497DB63E1C062C0800097C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497DB6571C062C0800097C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497DB6621C062C0800097C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		497DB6381C062C0800097C2E = {
+			isa = PBXGroup;
+			children = (
+				497DB6431C062C0800097C2E /* DailyPulseApp */,
+				497DB65D1C062C0800097C2E /* DailyPulseAppTests */,
+				497DB6681C062C0800097C2E /* DailyPulseAppUITests */,
+				497DB6421C062C0800097C2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		497DB6421C062C0800097C2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				497DB6411C062C0800097C2E /* DailyPulseApp.app */,
+				497DB65A1C062C0800097C2E /* DailyPulseAppTests.xctest */,
+				497DB6651C062C0800097C2E /* DailyPulseAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		497DB6431C062C0800097C2E /* DailyPulseApp */ = {
+			isa = PBXGroup;
+			children = (
+				497DB6471C062C0800097C2E /* AppDelegate.h */,
+				497DB6481C062C0800097C2E /* AppDelegate.m */,
+				497DB64A1C062C0800097C2E /* ViewController.h */,
+				497DB64B1C062C0800097C2E /* ViewController.m */,
+				497DB64D1C062C0800097C2E /* Main.storyboard */,
+				497DB6501C062C0800097C2E /* Assets.xcassets */,
+				497DB6521C062C0800097C2E /* LaunchScreen.storyboard */,
+				497DB6551C062C0800097C2E /* Info.plist */,
+				497DB6441C062C0800097C2E /* Supporting Files */,
+			);
+			path = DailyPulseApp;
+			sourceTree = "<group>";
+		};
+		497DB6441C062C0800097C2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				497DB6451C062C0800097C2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		497DB65D1C062C0800097C2E /* DailyPulseAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				497DB65E1C062C0800097C2E /* DailyPulseAppTests.m */,
+				497DB6601C062C0800097C2E /* Info.plist */,
+			);
+			path = DailyPulseAppTests;
+			sourceTree = "<group>";
+		};
+		497DB6681C062C0800097C2E /* DailyPulseAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				497DB6691C062C0800097C2E /* DailyPulseAppUITests.m */,
+				497DB66B1C062C0800097C2E /* Info.plist */,
+			);
+			path = DailyPulseAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		497DB6401C062C0800097C2E /* DailyPulseApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497DB66E1C062C0800097C2E /* Build configuration list for PBXNativeTarget "DailyPulseApp" */;
+			buildPhases = (
+				497DB63D1C062C0800097C2E /* Sources */,
+				497DB63E1C062C0800097C2E /* Frameworks */,
+				497DB63F1C062C0800097C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyPulseApp;
+			productName = DailyPulseApp;
+			productReference = 497DB6411C062C0800097C2E /* DailyPulseApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		497DB6591C062C0800097C2E /* DailyPulseAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497DB6711C062C0800097C2E /* Build configuration list for PBXNativeTarget "DailyPulseAppTests" */;
+			buildPhases = (
+				497DB6561C062C0800097C2E /* Sources */,
+				497DB6571C062C0800097C2E /* Frameworks */,
+				497DB6581C062C0800097C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				497DB65C1C062C0800097C2E /* PBXTargetDependency */,
+			);
+			name = DailyPulseAppTests;
+			productName = DailyPulseAppTests;
+			productReference = 497DB65A1C062C0800097C2E /* DailyPulseAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		497DB6641C062C0800097C2E /* DailyPulseAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497DB6741C062C0800097C2E /* Build configuration list for PBXNativeTarget "DailyPulseAppUITests" */;
+			buildPhases = (
+				497DB6611C062C0800097C2E /* Sources */,
+				497DB6621C062C0800097C2E /* Frameworks */,
+				497DB6631C062C0800097C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				497DB6671C062C0800097C2E /* PBXTargetDependency */,
+			);
+			name = DailyPulseAppUITests;
+			productName = DailyPulseAppUITests;
+			productReference = 497DB6651C062C0800097C2E /* DailyPulseAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		497DB6391C062C0800097C2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = DEK;
+				TargetAttributes = {
+					497DB6401C062C0800097C2E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					497DB6591C062C0800097C2E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 497DB6401C062C0800097C2E;
+					};
+					497DB6641C062C0800097C2E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 497DB6401C062C0800097C2E;
+					};
+				};
+			};
+			buildConfigurationList = 497DB63C1C062C0800097C2E /* Build configuration list for PBXProject "DailyPulseApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 497DB6381C062C0800097C2E;
+			productRefGroup = 497DB6421C062C0800097C2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				497DB6401C062C0800097C2E /* DailyPulseApp */,
+				497DB6591C062C0800097C2E /* DailyPulseAppTests */,
+				497DB6641C062C0800097C2E /* DailyPulseAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		497DB63F1C062C0800097C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497DB6541C062C0800097C2E /* LaunchScreen.storyboard in Resources */,
+				497DB6511C062C0800097C2E /* Assets.xcassets in Resources */,
+				497DB64F1C062C0800097C2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497DB6581C062C0800097C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497DB6631C062C0800097C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		497DB63D1C062C0800097C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497DB64C1C062C0800097C2E /* ViewController.m in Sources */,
+				497DB6491C062C0800097C2E /* AppDelegate.m in Sources */,
+				497DB6461C062C0800097C2E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497DB6561C062C0800097C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497DB65F1C062C0800097C2E /* DailyPulseAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497DB6611C062C0800097C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497DB66A1C062C0800097C2E /* DailyPulseAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		497DB65C1C062C0800097C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 497DB6401C062C0800097C2E /* DailyPulseApp */;
+			targetProxy = 497DB65B1C062C0800097C2E /* PBXContainerItemProxy */;
+		};
+		497DB6671C062C0800097C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 497DB6401C062C0800097C2E /* DailyPulseApp */;
+			targetProxy = 497DB6661C062C0800097C2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		497DB64D1C062C0800097C2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				497DB64E1C062C0800097C2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		497DB6521C062C0800097C2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				497DB6531C062C0800097C2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		497DB66C1C062C0800097C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		497DB66D1C062C0800097C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		497DB66F1C062C0800097C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DailyPulseApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DEK.DailyPulseApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		497DB6701C062C0800097C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DailyPulseApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DEK.DailyPulseApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		497DB6721C062C0800097C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DailyPulseAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DEK.DailyPulseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyPulseApp.app/DailyPulseApp";
+			};
+			name = Debug;
+		};
+		497DB6731C062C0800097C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DailyPulseAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DEK.DailyPulseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyPulseApp.app/DailyPulseApp";
+			};
+			name = Release;
+		};
+		497DB6751C062C0800097C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DailyPulseAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DEK.DailyPulseAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DailyPulseApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		497DB6761C062C0800097C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DailyPulseAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DEK.DailyPulseAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DailyPulseApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		497DB63C1C062C0800097C2E /* Build configuration list for PBXProject "DailyPulseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497DB66C1C062C0800097C2E /* Debug */,
+				497DB66D1C062C0800097C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		497DB66E1C062C0800097C2E /* Build configuration list for PBXNativeTarget "DailyPulseApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497DB66F1C062C0800097C2E /* Debug */,
+				497DB6701C062C0800097C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		497DB6711C062C0800097C2E /* Build configuration list for PBXNativeTarget "DailyPulseAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497DB6721C062C0800097C2E /* Debug */,
+				497DB6731C062C0800097C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		497DB6741C062C0800097C2E /* Build configuration list for PBXNativeTarget "DailyPulseAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497DB6751C062C0800097C2E /* Debug */,
+				497DB6761C062C0800097C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 497DB6391C062C0800097C2E /* Project object */;
+}
