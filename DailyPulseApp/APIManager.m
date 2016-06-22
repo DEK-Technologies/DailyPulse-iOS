@@ -131,8 +131,7 @@
                 break;
             case REQ_VOTE:
                 if (DICTIONARY_IS_VALID(requestObject)) {
-                    if (STRING_IS_VALID([requestObject objectForKey:@"panelId"]) &&
-                        NUMBER_IS_VALID([requestObject objectForKey:@"vote"]) &&
+                    if (NUMBER_IS_VALID([requestObject objectForKey:@"vote"]) &&
                         STRING_IS_VALID([requestObject objectForKey:@"submissionId"]) &&
                         NUMBER_IS_VALID([requestObject objectForKey:@"duplicated"])) {
                         
@@ -141,7 +140,6 @@
                                                   @"submitionDate": [NSNumber numberWithDouble:utc_timestamp],
                                                   @"dayDuplicated": [requestObject objectForKey:@"duplicated"]}];
                         params = @{@"submitionId": [requestObject objectForKey:@"submissionId"],
-                                   @"panelId": [requestObject objectForKey:@"panelId"],
                                    @"votes": votesArray};
                         
                         [self submitVote:params];

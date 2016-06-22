@@ -21,7 +21,6 @@
     
     self.dataManager = [DataManager instance];
     self.apiManager = [[APIManager alloc] initWithDelegate:self];
-    self.justStarted = YES;
     
     [self.accountButton setTitle:NSLocalizedString(@"Account", @"ResultsViewController") forState:UIControlStateNormal];
     
@@ -29,22 +28,12 @@
                                             selector:@selector(appWillEnterForeground)
                                                 name:UIApplicationWillEnterForegroundNotification
                                               object:nil];
-    
-    self.officeLabel.text = self.dataManager.data.userOffice;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (self.dataManager.data.userAlreadyLogged) {
-        if (![self.dataManager isVoteAlreadySent] && self.justStarted) {
-            [self performSegueWithIdentifier: @"SubmitViewControllerSegue" sender:self];
-            self.justStarted = NO;
-        }
-        else
-            [self performSelector:@selector(checkConnection) withObject:nil afterDelay:2];
-    }
-    else {
+    if (!self.dataManager.data.userAlreadyLogged) {
         UINavigationController *ctrl = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginNavigationController"];
         
         [self presentViewController:ctrl animated:YES completion:nil];
@@ -53,7 +42,11 @@
 
 - (void)appWillEnterForeground {
     if (self.dataManager.data.userAlreadyLogged) {
-        [self performSelector:@selector(checkConnection) withObject:nil afterDelay:2];
+        self.officeLabel.text = self.dataManager.data.userOffice;
+        if (![self.dataManager isVoteAlreadySent])
+            [self performSegueWithIdentifier: @"SubmitViewControllerSegue" sender:self];
+        else
+            [self performSelector:@selector(checkConnection) withObject:nil afterDelay:2];
     }
 }
 

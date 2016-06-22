@@ -60,13 +60,6 @@
         return NO;
 }
 
-- (NSString *)getCurrentPanelId {
-    if (self.data.userWorkSite == IN_SITE)
-        return self.data.officePanelId;
-    else
-        return self.data.mobilePanelId;
-}
-
 - (void)resetData {
     [self.data resetData];
 }

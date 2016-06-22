@@ -7,7 +7,7 @@
 
 @interface AccountViewController ()
 - (IBAction)signOutButtonPressed:(id)sender;
-- (void)workingSitePressed:(id)sender;
+- (IBAction)showProfilePressed:(id)sender;
 - (void)doneButtonPressed;
 @end
 
@@ -17,6 +17,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.dataManager = [DataManager instance];
+    self.apiManager = [[APIManager alloc] initWithDelegate:self];
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
@@ -34,50 +35,16 @@
     self.officeTitleLabel.text = NSLocalizedString(@"Office", @"AccountViewController");
     self.siteLabel.text = NSLocalizedString(@"Working site", @"AccountViewController");
     
+    [self.signOutButton setTitle:NSLocalizedString(@"Sign Out", @"AccountViewController") forState:UIControlStateNormal];
+    [self.showProfileButton setTitle:NSLocalizedString(@"Show/Edit Profile", @"AccountViewController") forState:UIControlStateNormal];
+    
     self.userLabel.text = self.dataManager.data.username;
     self.officeLabel.text = self.dataManager.data.userOffice;
-    
-    if (self.dataManager.data.userWorkSite == IN_SITE)
-         self.workingSiteControl.selectedSegmentIndex = 0;
-    else
-         self.workingSiteControl.selectedSegmentIndex = 1;
-          
-    [self.workingSiteControl addTarget:self
-                                action:@selector(workingSitePressed:)
-                      forControlEvents:UIControlEventValueChanged];
 }
 
-- (void)workingSitePressed:(id)sender {
-    UIAlertController *alert = [UIAlertController
-                                alertControllerWithTitle:NSLocalizedString(@"Working site", @"AccountViewController")
-                                message:NSLocalizedString(@"Changing working site. Continue?\nNote: this information is used to set the site where your votes are stored.\nIn-Site (in your company's office)\nOff-Site (at a customer's office or from home)", @"AccountViewController")
-                                preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"AccountViewController")
-                                                 style:UIAlertActionStyleDefault
-                                               handler:^(UIAlertAction * action){
-                                                   if (self.workingSiteControl.selectedSegmentIndex == 0)
-                                                       self.dataManager.data.userWorkSite = IN_SITE;
-                                                   else
-                                                       self.dataManager.data.userWorkSite = OFF_SITE;;
-                                                       
-                                                   [alert dismissViewControllerAnimated:YES completion:nil];
-                                               }];
-    UIAlertAction* cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"AccountViewController")
-                                                     style:UIAlertActionStyleDefault
-                                                   handler:^(UIAlertAction * action){
-                                                       if (self.dataManager.data.userWorkSite == IN_SITE)
-                                                           self.workingSiteControl.selectedSegmentIndex = 0;
-                                                       else
-                                                           self.workingSiteControl.selectedSegmentIndex = 1;
-                                                       
-                                                       [alert dismissViewControllerAnimated:YES completion:nil];
-                                                   }];
-    
-    [alert addAction:cancel];
-    [alert addAction:ok];
-    
-    [self presentViewController:alert animated:YES completion:nil];
+- (IBAction)showProfilePressed:(id)sender {
+    if ([self.apiManager connectionAvailable:self])
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://users.celpax.com/#section_UserProfile"]];
 }
 
 - (void)doneButtonPressed {
@@ -92,6 +59,10 @@
 - (IBAction)signOutButtonPressed:(id)sender {
     [self.dataManager resetData];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)apiManagerRequest:(RequestEnum)request success:(id)responseObject {
+    // empty
 }
 
 /*

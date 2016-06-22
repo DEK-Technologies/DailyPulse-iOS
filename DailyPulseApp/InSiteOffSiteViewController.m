@@ -7,45 +7,42 @@
 #import "Common.h"
 
 @interface InSiteOffSiteViewController ()
-- (IBAction)inSiteButtonPressed:(id)sender;
-- (IBAction)offSiteButtonPressed:(id)sender;
+- (IBAction)showProfilePressed:(id)sender;
 @end
 
 @implementation InSiteOffSiteViewController
 
-- (IBAction)inSiteButtonPressed:(id)sender {
-    self.dataManager.data.userWorkSite = IN_SITE;
+- (IBAction)showProfilePressed:(id)sender {
     [self.dataManager storeData];
     [[NSNotificationCenter defaultCenter] postNotificationName:FirstLoginPerformedNotification object:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)offSiteButtonPressed:(id)sender {
-    self.dataManager.data.userWorkSite = OFF_SITE;
-    [self.dataManager storeData];
-    [[NSNotificationCenter defaultCenter] postNotificationName:FirstLoginPerformedNotification object:nil];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if ([self.apiManager connectionAvailable:self])
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://users.celpax.com/#section_UserProfile"]];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.dataManager = [DataManager instance];
+    self.apiManager = [[APIManager alloc] initWithDelegate:self];
     
     self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.title = NSLocalizedString(@"Choose Site", @"LoginViewController");
+    self.navigationItem.title = NSLocalizedString(@"Choose Site", @"InSiteOffSiteViewController");
     
-    self.questionLabel.text = NSLocalizedString(@"Where do you usually work?", @"InSiteOffSiteViewController");
-    self.orLabel.text = NSLocalizedString(@"Or", @"InSiteOffSiteViewController");
+    self.questionLabel.text = NSLocalizedString(@"Where do you usually work?\nTap below to set it up.", @"InSiteOffSiteViewController");
     self.noteLabel.text = NSLocalizedString(@"Note: this information is used to set the site where your votes are stored. You can change this setting at any time.", @"InSiteOffSiteViewController");
     
-    [self.inSiteButton setTitle:NSLocalizedString(@"In-Site (in your company's office)", @"InSiteOffSiteViewController") forState:UIControlStateNormal];
-    [self.offSiteButton setTitle:NSLocalizedString(@"Off-Site (at a customer's office or from home)", @"InSiteOffSiteViewController") forState:UIControlStateNormal];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)apiManagerRequest:(RequestEnum)request success:(id)responseObject {
+    // empty
 }
 
 /*

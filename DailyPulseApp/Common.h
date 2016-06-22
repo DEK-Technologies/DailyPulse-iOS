@@ -12,12 +12,10 @@
 #define STRING_IS_VALID(x)      ( ( ((x) != nil) && [(x) isKindOfClass:[NSString class]] && ![(x) isEqualToString:@""] ) ? YES : NO )
 #define FirstLoginPerformedNotification @"FirstLoginPerformedNotification"
 
-
-#warning The following strings must be defined:
+#import "../../ExternalFiles/DailyPulseApp_SecretData.h"
+/*#warning The following strings must be defined:
 #define MOBILE_SITE_ID        @"My-Mobile-Site-Id"
-#define OFFICE_PANEL_ID       @"My-Office-Panel-Id"
-#define MOBILE_PANEL_ID       @"My-Mobile-Panel-Id"
 #define ACCESS_KEY_ID         @"My-Access-Key-Id"
-#define SECRET_ACCESS_KEY     @"My-Secret-Access-Key"
+#define SECRET_ACCESS_KEY     @"My-Secret-Access-Key"*/
 
 #endif /* Common_h */

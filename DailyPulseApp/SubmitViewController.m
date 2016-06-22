@@ -11,6 +11,7 @@
 - (IBAction)happyButtonPressed:(id)sender;
 - (IBAction)sadButtonPressed:(id)sender;
 - (IBAction)cancelButtonPressed:(id)sender;
+- (IBAction)showProfilePressed:(id)sender;
 - (void)showMesg:(NSString *)msg showActivity:(BOOL)act;
 - (void)hideMesg;
 - (void)dismissMe;
@@ -24,13 +25,7 @@
     self.dataManager = [DataManager instance];
     self.apiManager = [[APIManager alloc] initWithDelegate:self];
     
-    NSString *site = @"";
-    if (self.dataManager.data.userWorkSite == IN_SITE)
-        site = NSLocalizedString(@"In-Site", @"SubmitViewController");
-    else
-        site = NSLocalizedString(@"Off-Site", @"SubmitViewController");
-    
-    self.siteLabel.text = [NSString stringWithFormat:NSLocalizedString(@"You are voting: %@", @"SubmitViewController"), site];
+    [self.showProfileButton setTitle:NSLocalizedString(@"Show/Edit Profile", @"SubmitViewController") forState:UIControlStateNormal];
     
     self.questionLabel.text = NSLocalizedString(@"How was your day?", @"SubmitViewController");
 }
@@ -38,8 +33,7 @@
 - (IBAction)happyButtonPressed:(id)sender {
     if ([self.apiManager connectionAvailable:self]) {
         [self showMesg:@"Submitting ..." showActivity:YES];
-        [self.apiManager performRequest:REQ_VOTE object:@{@"panelId": [self.dataManager getCurrentPanelId],
-                                                          @"vote": @1,
+        [self.apiManager performRequest:REQ_VOTE object:@{@"vote": @1,
                                                           @"submissionId": self.dataManager.data.submissionId,
                                                           @"duplicated": [NSNumber numberWithBool:[self.dataManager isVoteAlreadySent]]}];
     }
@@ -48,8 +42,7 @@
 - (IBAction)sadButtonPressed:(id)sender {
     if ([self.apiManager connectionAvailable:self]) {
         [self showMesg:@"Submitting ..." showActivity:YES];
-        [self.apiManager performRequest:REQ_VOTE object:@{@"panelId": [self.dataManager getCurrentPanelId],
-                                                          @"vote": @0,
+        [self.apiManager performRequest:REQ_VOTE object:@{@"vote": @0,
                                                           @"submissionId": self.dataManager.data.submissionId,
                                                           @"duplicated": [NSNumber numberWithBool:[self.dataManager isVoteAlreadySent]]}];
     }
@@ -67,6 +60,11 @@
 
 - (void)apiManagerRequest:(RequestEnum)request failure:(NSError *)error {
     [self showAlert];
+}
+
+- (IBAction)showProfilePressed:(id)sender {
+    if ([self.apiManager connectionAvailable:self])
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://users.celpax.com/#section_UserProfile"]];
 }
 
 - (void)showMesg:(NSString *)msg showActivity:(BOOL)act {

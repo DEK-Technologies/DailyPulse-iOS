@@ -13,6 +13,5 @@
 @property (nonatomic, weak) IBOutlet UIButton *accountButton;
 @property (nonatomic, strong) DataManager *dataManager;
 @property (nonatomic, strong) APIManager *apiManager;
-@property (nonatomic) BOOL justStarted;
 
 @end

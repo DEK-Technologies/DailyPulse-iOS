@@ -14,6 +14,5 @@
 - (void)voteSent;
 - (BOOL)isVoteAlreadySent;
 - (void)resetData;
-- (NSString *)getCurrentPanelId;
 
 @end
